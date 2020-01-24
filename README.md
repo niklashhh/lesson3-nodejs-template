@@ -30,7 +30,7 @@ First you need to clone the git repository using a command-line tool called `git
 >
 > The square brackets `[]` mean that the part is optional
 
-After cloning the repository, you have to change your `working directory` so that future commands can find required files, like [`package.json`](package.json) and [`docker-compose.yml`](docker-compose.yml)
+After cloning the repository, you have to change your `working directory` so that future commands can find required files, like [`package.json`](backend/package.json) and [`docker-compose.yml`](docker-compose.yml)
 
     cd lesson3-nodejs-template
 
