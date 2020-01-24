@@ -1,6 +1,6 @@
-var Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
-/** INIT DATABASE **/
+/* INIT DATABASE */
 
 const sequelize = new Sequelize({
   logging: false,
@@ -8,30 +8,28 @@ const sequelize = new Sequelize({
   storage: './db/chat.sqlite',
 });
 
-/** INIT CHAT TABLE WITH MESSAGE **/
+/* INIT CHAT TABLE WITH MESSAGE */
 
 const Chat = sequelize.define('chats', {
   message: Sequelize.TEXT,
 }, {
   timestamps: true,
-  instanceMethods: {
-    toJSON: async function () {
-      return {
-        // Id and timestamps are generated automatically
-        id: this.id,
-        createdAt: this.createdAt,
-
-        // Message was added on the POST request
-        message: this.message,
-      };
-    },
-  },
 });
 
-/** EXPORT CHAT OBJECT **/
+// toJSON method is automatically called when the object is serialized in Koa
+Chat.prototype.toJSON = function toJSON() {
+  return {
+    // Id and timestamps are generated automatically
+    id: this.id,
+    createdAt: this.createdAt,
 
-exports.sync = (options) => {
-  return sequelize.sync(options);
+    // Message was added on the POST request
+    message: this.message,
+  };
 };
+
+/* EXPORT CHAT OBJECT */
+
+exports.sync = (options) => sequelize.sync(options);
 
 exports.Chat = Chat;
