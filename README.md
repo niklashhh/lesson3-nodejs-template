@@ -57,9 +57,9 @@ You should now see something similar to
     docker-compose build
     docker-compose up
 
-### Exercises
+## Exercises
 
-## The app
+### The app
 
 - Use [Postman](https://www.getpostman.com/), [curl](https://linux.die.net/man/1/curl) or similiar to
   - Post a new message to _/api/chats_
@@ -67,7 +67,7 @@ You should now see something similar to
 - Add nickname and chat rooms to messages
 - Create a new endpoint _/api/chats/\<room\>_ that returns messages for specific room
 
-## Deploy
+### Deploy
 
 - Use SSH keys to login to the server
 - Install needed dependencies
