@@ -16,7 +16,7 @@ Docker is a tool that allows a programmer to easily deploy their applications in
 
 > Docker cannot be installed in Windows 10 Home edition
 >
-> This project uses Docker to run Node.js behind the curtains
+> This project uses Docker to run Node.js behind the scene
 
 ## Running the example
 
@@ -45,7 +45,7 @@ You should now see something similar to
 
 > `cd` means change directory and `ls` is short for list.
 >
-> The dollar sign \$ indicates that the following commands are written to the command-line terminal
+> The dollar sign `$` indicates that the following commands are written to the command-line terminal
 
 ### Running with plain Node.js
 
