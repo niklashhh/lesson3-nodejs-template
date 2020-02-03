@@ -2,7 +2,6 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
-const cors = require('kcors');
 
 const database = require('./database');
 
@@ -13,7 +12,6 @@ module.exports = app;
 
 app.use(logger());
 
-app.use(cors({ credentials: true }));
 app.use(bodyParser());
 
 /* METHODS TO RESPOND TO THE ROUTES */

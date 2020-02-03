@@ -15,7 +15,6 @@
     "lint": "eslint --ext .js src"
   },
   "dependencies": {
-    "kcors": "^2.2.2",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.1",
